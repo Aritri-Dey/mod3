@@ -1,0 +1,16 @@
+uuid: 255769f4-1190-4bd1-81cf-d902d33e9ef1
+langcode: en
+status: true
+dependencies: {  }
+id: devsplit
+label: devSplit
+description: ''
+weight: 0
+stackable: false
+storage: folder
+folder: ../config/devSplit
+module:
+  webform_ui: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

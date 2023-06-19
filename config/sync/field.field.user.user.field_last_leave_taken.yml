@@ -1,0 +1,21 @@
+uuid: 7ec4de6e-761c-40cd-9ca3-a4fe7a1e1d44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_last_leave_taken
+  module:
+    - datetime
+    - user
+id: user.user.field_last_leave_taken
+field_name: field_last_leave_taken
+entity_type: user
+bundle: user
+label: 'Last Leave Taken'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

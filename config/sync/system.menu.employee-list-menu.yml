@@ -1,0 +1,8 @@
+uuid: 5c195968-aced-42c2-83c6-8b3abf868b8d
+langcode: en
+status: true
+dependencies: {  }
+id: employee-list-menu
+label: 'employee list menu'
+description: 'employee list'
+locked: false

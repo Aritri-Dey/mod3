@@ -1,0 +1,25 @@
+uuid: 5dc98d5d-4acb-416b-ba32-2cb0044a94a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.salary
+  module:
+    - node
+id: hr
+label: HR
+weight: 4
+is_admin: null
+permissions:
+  - 'access user profiles'
+  - 'administer account settings'
+  - 'administer users'
+  - 'cancel account'
+  - 'create salary content'
+  - 'delete any salary content'
+  - 'delete own salary content'
+  - 'delete salary revisions'
+  - 'edit any salary content'
+  - 'edit own salary content'
+  - 'revert salary revisions'
+  - 'view salary revisions'

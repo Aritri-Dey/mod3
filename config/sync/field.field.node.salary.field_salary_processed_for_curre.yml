@@ -1,0 +1,23 @@
+uuid: 00412d92-c01a-4333-90a8-e975fd432663
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_salary_processed_for_curre
+    - node.type.salary
+id: node.salary.field_salary_processed_for_curre
+field_name: field_salary_processed_for_curre
+entity_type: node
+bundle: salary
+label: 'Salary processed for current month'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Processed
+  off_label: Rejected
+field_type: boolean

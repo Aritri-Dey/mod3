@@ -1,0 +1,76 @@
+uuid: 9e112598-48cf-4261-8987-d81bb11b97ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.salary.field_basic_pay
+    - field.field.node.salary.field_employee_name
+    - field.field.node.salary.field_hra
+    - field.field.node.salary.field_salary_processed_for_curre
+    - field.field.node.salary.field_salary_processed_on_
+    - field.field.node.salary.field_special_allowances
+    - node.type.salary
+  module:
+    - datetime
+    - user
+id: node.salary.default
+targetEntityType: node
+bundle: salary
+mode: default
+content:
+  field_basic_pay:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_employee_name:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_hra:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_salary_processed_for_curre:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_salary_processed_on_:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_special_allowances:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  links: true

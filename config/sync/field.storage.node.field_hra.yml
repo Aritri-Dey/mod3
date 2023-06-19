@@ -1,0 +1,20 @@
+uuid: 6fba18ba-a0b4-4bfb-9011-81b1f5168c59
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_hra
+field_name: field_hra
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

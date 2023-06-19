@@ -1,0 +1,39 @@
+uuid: f2c3d17b-f8ce-4e45-9a91-438f5a114b36
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.employee_left_block
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bootstrap
+id: views_block__employee_left_block_block_1
+theme: bootstrap
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:employee_left_block-block_1'
+settings:
+  id: 'views_block:employee_left_block-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      hr: hr
+      employee: employee
