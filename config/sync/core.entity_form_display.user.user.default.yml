@@ -1,0 +1,89 @@
+uuid: f98b4b98-6763-4f26-993d-4f008467f4cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_facebook
+    - field.field.user.user.field_last_leave_taken
+    - field.field.user.user.field_linkedin
+    - field.field.user.user.field_role
+    - field.field.user.user.field_twitter
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - datetime
+    - image
+    - link
+    - user
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: -10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_facebook:
+    type: link_default
+    weight: 8
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_last_leave_taken:
+    type: datetime_default
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_linkedin:
+    type: link_default
+    weight: 7
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_role:
+    type: options_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_twitter:
+    type: link_default
+    weight: 9
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  language:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image_image
+    weight: -1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden: {  }

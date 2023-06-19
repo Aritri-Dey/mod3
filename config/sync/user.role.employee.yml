@@ -1,0 +1,10 @@
+uuid: 0ccfef7a-3e28-416f-889c-88c5e0534a82
+langcode: en
+status: true
+dependencies: {  }
+id: employee
+label: Employee
+weight: 5
+is_admin: null
+permissions:
+  - 'access user profiles'

@@ -1,0 +1,241 @@
+uuid: 2a3d8663-accc-430f-8276-c3bf3ed10460
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_facebook
+    - field.field.user.user.field_last_leave_taken
+    - field.field.user.user.field_linkedin
+    - field.field.user.user.field_role
+    - field.field.user.user.field_twitter
+    - field.field.user.user.user_picture
+    - image.style.medium
+  module:
+    - datetime
+    - image
+    - layout_builder
+    - link
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Pic and name'
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          36786144-5ac2-480f-abaf-be3957b13482:
+            uuid: 36786144-5ac2-480f-abaf-be3957b13482
+            region: first
+            configuration:
+              id: 'field_block:user:user:user_picture'
+              label: Picture
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: large
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          cd38ee01-3158-4eb8-af8e-47e6a5c41044:
+            uuid: cd38ee01-3158-4eb8-af8e-47e6a5c41044
+            region: first
+            configuration:
+              id: 'field_block:user:user:name'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          b6f86691-de2e-426e-94d5-913adefce926:
+            uuid: b6f86691-de2e-426e-94d5-913adefce926
+            region: first
+            configuration:
+              id: 'field_block:user:user:field_role'
+              label: Role
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: Socials
+          context_mapping: {  }
+          column_widths: 33-34-33
+        components:
+          b1eb3448-ea42-411d-ae0a-6d8a6b1b8a2c:
+            uuid: b1eb3448-ea42-411d-ae0a-6d8a6b1b8a2c
+            region: first
+            configuration:
+              id: 'field_block:user:user:field_linkedin'
+              label: Linkedin
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          7c31dc84-b6d6-40a0-9808-79e2355e1cd2:
+            uuid: 7c31dc84-b6d6-40a0-9808-79e2355e1cd2
+            region: second
+            configuration:
+              id: 'field_block:user:user:field_facebook'
+              label: Facebook
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          aa09cf50-cd24-4688-99ac-775e90cb3202:
+            uuid: aa09cf50-cd24-4688-99ac-775e90cb3202
+            region: third
+            configuration:
+              id: 'field_block:user:user:field_twitter'
+              label: Twitter
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_facebook:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_last_leave_taken:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_linkedin:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_role:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_twitter:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  member_for: true
